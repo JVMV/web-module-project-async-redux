@@ -1,0 +1,1 @@
+export const ADD_ALL_ACTIVITY = 'ADD_ALL_ACTIVITY'

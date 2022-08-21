@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 import GetUnbored from './getUnbored';
 import { connect } from 'react-redux';
+import ActivityList from './ActivityList';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <h1>NeverBored.org</h1>
@@ -14,8 +15,9 @@ function App() {
         </p>
       </div>
       <GetUnbored />
+      <ActivityList />
     </div>
   );
 }
 
-export default App;
+export default connect(st => st)(App);
