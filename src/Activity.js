@@ -1,13 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 const Activity = (props) => {
+    const { activity, participants } = props.activity
 
     return(
         <div>
-            This is an activity
+            {`${activity} ${participants}`}
         </div>
     )
 }
 
-export default connect(st => st)(Activity)
+export default Activity

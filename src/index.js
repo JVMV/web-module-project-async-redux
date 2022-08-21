@@ -17,11 +17,10 @@ export const resetStore = () => {
 }
 resetStore()
 
-const container = document.getElementById('root')
-const root = createRoot(container)
-
-root.render(
+ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>
-)
+  ,
+  document.getElementById('root')
+);

@@ -14,10 +14,10 @@ const initialActivityList = [
     }
 ]
 
-const activities = (state, action) => {
+const activities = (activityState = initialActivityList, action) => {
     switch(action.type) {
         default:
-        return state
+        return activityState
     }
 }
 
