@@ -5,7 +5,7 @@ const Activity = (props) => {
 
     return(
         <div>
-            {`${activity} ${participants}`}
+            {`The computer gods calculated that you should ${activity}. This requires only ${participants === 1 ? 'you.' : participants + ' people.'}`}
         </div>
     )
 }

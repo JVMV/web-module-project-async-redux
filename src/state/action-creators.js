@@ -9,6 +9,6 @@ export const getActivities = () => (dispatch) => {
             dispatch({type: types.ADD_ALL_ACTIVITY, payload: res.data})
         })
         .catch(err => {
-            console.log(err)
+            console.log(err.message)
         })
 }
