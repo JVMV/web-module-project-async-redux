@@ -1,12 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Div = styled.div`
+padding: 5%;
+background-color: darkSalmon;
+color: white;;
+font-weight: bold;
+font-size: 20px;
+`
 
 const Activity = (props) => {
     const { activity, participants } = props.activity
 
     return(
-        <div>
-            {`The computer gods calculated that you should ${activity}. This requires only ${participants === 1 ? 'you.' : participants + ' people.'}`}
-        </div>
+        <Div>
+            {`The computer gods calculated that you should ${activity}. This requires ${participants === 1 ? 'only you.' : participants + ' people.'}`}
+        </Div>
     )
 }
 
