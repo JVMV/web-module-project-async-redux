@@ -1,10 +1,12 @@
 import * as types from './action-types'
 import axios from 'axios'
 
-export const getActivities = () => {
-    axios.get('https://www.boredapi.com/api/activity')
+const URL = 'https://www.boredapi.com/api/activity'
+
+export const getActivities = () => (dispatch) => {
+    axios.get(URL)
         .then(res => {
-            console.log(res)
+            dispatch({type: types.ADD_ALL_ACTIVITY, payload: res.data})
         })
         .catch(err => {
             console.log(err)

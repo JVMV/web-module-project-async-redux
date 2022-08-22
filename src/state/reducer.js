@@ -16,6 +16,9 @@ const initialActivityList = [
 
 const activities = (activityState = initialActivityList, action) => {
     switch(action.type) {
+        case types.ADD_ALL_ACTIVITY: {
+            return activityState.concat(action.payload)
+        }
         default:
         return activityState
     }

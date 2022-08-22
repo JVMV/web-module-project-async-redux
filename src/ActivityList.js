@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Activity from './Activity';
 import { connect } from 'react-redux';
+import * as actions from './state/action-creators'
 
 const ActivityList = (props) => {
-    const { activities } = props
+    const { activities, getActivities } = props
+    useEffect(() => {
+        getActivities()
+    }, [])
+
     return(
         <div>
             {activities.map(activity => {
@@ -13,4 +18,4 @@ const ActivityList = (props) => {
     )
 }
 
-export default connect(st => st)(ActivityList)
+export default connect(st => st, actions)(ActivityList)
